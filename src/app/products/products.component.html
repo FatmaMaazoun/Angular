@@ -1,0 +1,13 @@
+<h1>Liste des produits</h1>
+<p>Search :</p>
+<input type="number" [(ngModel)]="prix">
+<div *ngFor="let p of listProdcut">
+    <div *ngIf="p.price<prix||prix==-1">
+   
+    <pre  > <h3>{{p.id}}   {{p.title}}  {{p.price}} {{p.quantity}} {{p.like}} <a routerLink="/detail/'{{p.id}}">Detail  </a>  <button (click)="decreaseQuantity(p)" [disabled]="p.quantity==0">Buy</button> <button (click)="increaseProduct(p)">Like</button></h3></pre>
+
+
+</div>
+</div>   
+
+<!-- ou <a [routerLink]='/detail/',p.id">Detail  </a>-->

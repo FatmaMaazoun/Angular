@@ -1,0 +1,12 @@
+<h1>Liste des produits</h1>
+<p>Search :</p>
+<div *ngFor="let p of listProdcut">
+    
+   
+    <pre  > <h3>{{p.id}}   {{p.title}}  {{p.price}} {{p.quantity}} {{p.like}} <a routerLink="/detail/'{{p.id}}">Detail  </a> </h3></pre>
+
+
+
+</div>   
+
+<!-- ou <a [routerLink]='/detail/',p.id">Detail  </a>-->
